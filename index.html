@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Startpage</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<body>
+    <div class="bg-image"></div>
+    <div class="window-bg">
+        <div class="front-img"></div>
+        <div class="titlediv">
+            <div id=titleb></div>
+            <div id="clock"></div>
+        </div>
+        <div class="windowbackgroundarea1"><div id="Subtitle">Don't Let Your Memes Be Dreams</div></div>
+        <div class="windowbackgroundarea2">
+        <div class="centerDivs">
+            <div class="category">
+                <div class="categorytitle">3D Printer</div>
+                <div class="categorycontent"><a href="https://github.com/Nam0/PrinterGcode/">Github</a> - <a href="octopi.mshome.net/">Octopi</a> - <a href="https://www.stlfinder.com/">STL Finder</a></div>
+                <div class="categorytitle">Dev</div>
+                <div class="categorycontent"><a href="https://github.com/Nam0">Github</a></div>
+                <div class="categorytitle">Misc.</div>
+                <div class="categorycontent"><a href="https://mail.google.com/mail/u/0/#inbox">Email</a> - <a href="https://www.youtube.com/">Youtube</a> - <a href="https://thepiratebay.org/search/">Pirate Bay</a></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="pixeloverlay"></div>
+    <div class="vignette"></div>
+    <script>
+        var clock=document.getElementById("clock");
+        function updateClock(){
+            var date=new Date();
+            date.setHours(date.getHours()+0)
+            var hours = date.getHours().toString();
+            var minutes = date.getMinutes().toString();
+            var seconds = date.getSeconds().toString();
+            if (hours.length==1){
+                hours="0"+hours
+            }
+            if (minutes.length==1){
+                minutes="0"+minutes
+            }
+            if (seconds.length==1){
+                seconds="0"+seconds
+            }
+            clock.innerHTML=hours+":"+minutes+":"+seconds;
+        }
+        updateClock();
+        setInterval(updateClock,1000);
+    </script>
+    </body>
+    </html>
